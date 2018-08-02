@@ -79,5 +79,8 @@
 			"Traversing",
 			"Wrap"
 		]
+	},
+	"dependencies": {
+		"npm": "6.3.0"
 	}
 }
