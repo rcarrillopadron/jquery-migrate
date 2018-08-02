@@ -250,15 +250,6 @@ QUnit.test( "jQuery.isNumeric", function( assert ) {
 	} );
 } );
 
-QUnit[ jQueryVersionSince( "3.3.0" ) ? "test" : "skip" ]( "jQuery.isWindow", function( assert ) {
-	assert.expect( 3 );
-
-	expectWarning( assert, "isWindow", 1, function() {
-		assert.equal( jQuery.isWindow( [] ), false, "array" );
-		assert.equal( jQuery.isWindow( window ), true, "window" );
-	} );
-} );
-
 QUnit.test( "jQuery.unique", function( assert ) {
 	assert.expect( 2 );
 
@@ -309,16 +300,6 @@ QUnit.test( "jQuery.holdReady (warn only)", function( assert ) {
 		jQuery.holdReady( false );
 	} );
 } );
-
-QUnit[ jQueryVersionSince( "3.2.0" ) ? "test" : "skip" ]( "jQuery.nodeName", function( assert ) {
-	assert.expect( 2 );
-
-	expectWarning( assert, "jQuery.nodeName", function() {
-		var div = document.createElement( "div" );
-
-		assert.equal( jQuery.nodeName( div, "div" ), true, "it's a div" );
-	})
-});
 
 TestManager.runIframeTest( "old pre-3.0 jQuery", "core-jquery2.html",
 	function( assert, jQuery, window, document, log ) {
